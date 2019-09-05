@@ -24,6 +24,7 @@
             <input type="text" id="name" name="firstname" placeholder="Your name..">
             <input type="text" id="comment" name="name" placeholder="Your comment..">
             <button id="btn">COMMENT</button>
+            <button id="editbtn" style="display: none;">UPDATE</button>
         </form>
         <div id="msgs">
             <!--<div class="textt" >

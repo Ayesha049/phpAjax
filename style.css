@@ -74,6 +74,23 @@ input[type=text], select {
 }
 
   
+#editbtn:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+#editbtn{
+    width: 30%;
+    background-color: rgba(0, 102, 0, 0.8);
+    color: white;
+    padding: 14px 20px;
+    margin: 1vw;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+  
 #btn:hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
 }
@@ -94,7 +111,7 @@ input[type=text], select {
 
 .textt{
     overflow: hidden;
-    width: 58vw;
+    width: 33vw;
     display: flex;
     padding: .5vw;
     align-items: flex-start;
@@ -106,7 +123,7 @@ input[type=text], select {
     font-size: 1vw;
 }
 
-.msg{
+.dis_name{
     width: 100%;
     border-style: solid;
     border-width: 0px 0px .5px 0px;
@@ -114,12 +131,13 @@ input[type=text], select {
 }
 
 
-#update:hover {
+
+/*.edit:hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 
   
-#delete:hover {
+.delete:hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
-}
+}*/

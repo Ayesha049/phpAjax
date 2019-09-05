@@ -17,11 +17,11 @@ $comments = "";
 while($row = mysqli_fetch_array($result))
 {
     $comments .= '<div class="textt" >';
-    $comments .=    '<div class="msg">' . $row['Name'] . "</div>" .
-                    '<div>' . $row['Comment'] . '</div>
+    $comments .=    '<div class="dis_name">' . $row['Name'] . "</div>" .
+                    '<div class="dis_com">' . $row['Comment'] . '</div>
                     <div>
-                        <button class="edit" id="' .$row['ID']. '">Update</button>
-                        <button class="delete" id="' .$row['ID']. '">Delete</button>
+                        <button class="edit" style="background-color: lightgreen;" data-id="' .$row['ID']. '">Update</button>
+                        <button class="delete" style="background-color: lightcoral;" data-id="' .$row['ID']. '">Delete</button>
                     </div>
                 </div>';
 }
@@ -52,7 +52,14 @@ if(isset($_GET['delete'])){
     mysqli_query($conn, $sql);
 }
 
+if(isset($_POST['update'])){
+    $name = $_POST['Name'];
+    $comment = $_POST['Comment'];
+    $id = $_POST['id'];
 
+    $sql = "UPDATE user SET Name='{$name}', Comment='{$comment}' WHERE id=".$id;
+    mysqli_query($conn, $sql);
+}
 
 
 ?>
